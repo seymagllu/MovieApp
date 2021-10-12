@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../models/movie';
+import {Category} from "../models/category";
+import {MovieRepositoy} from "../models/movie.repositoy";
 
 @Component({
   selector: 'app-movies',
@@ -7,7 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesComponent implements OnInit {
 
-  constructor() { }
+  movies: Movie[];
+  movieRepository: MovieRepositoy;
+
+  constructor() {
+    this.movieRepository = new MovieRepositoy();
+    this.movies = this.movieRepository.getMovies()
+  }
 
   ngOnInit(): void {
   }
