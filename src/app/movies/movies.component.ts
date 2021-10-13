@@ -9,13 +9,17 @@ import {MovieRepositoy} from "../models/movie.repositoy";
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-
+  title = "Film Listesi";
   movies: Movie[];
   movieRepository: MovieRepositoy;
+  popularMovies: Movie[];
 
+  filterText: string = "filterText";
+ 
   constructor() {
     this.movieRepository = new MovieRepositoy();
-    this.movies = this.movieRepository.getMovies()
+    this.movies = this.movieRepository.getMovies();
+    this.popularMovies = this.movieRepository.getMovies();
   }
 
   ngOnInit(): void {

@@ -8,6 +8,9 @@ import { MoviesComponent } from './movies/movies.component';
 import { CategoryComponent } from './category/category.component';
 import { MovieComponent } from './movies/movie/movie.component';
 import { MovieDetailComponent } from './movie-details/movie-detail.component';
+import { SummaryPipe } from './pipes/summary.pipe';
+import { FormsModule } from '@angular/forms';
+import { MovieFilterPipe } from './pipes/movie-filter.pipe';
 
 @NgModule({
   declarations: [ // component
@@ -16,11 +19,15 @@ import { MovieDetailComponent } from './movie-details/movie-detail.component';
     MoviesComponent,
     CategoryComponent,
     MovieComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    SummaryPipe,
+    MovieFilterPipe
   ],
   imports: [     //module
     BrowserModule,
+    FormsModule,
     AppRoutingModule
+    
   ],
   providers: [],  //services
   bootstrap: [AppComponent]  //starter component
