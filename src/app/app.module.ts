@@ -11,6 +11,9 @@ import { MovieDetailComponent } from './movie-details/movie-detail.component';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { FormsModule } from '@angular/forms';
 import { MovieFilterPipe } from './pipes/movie-filter.pipe';
+import {HttpClientModule} from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [ // component
@@ -26,8 +29,8 @@ import { MovieFilterPipe } from './pipes/movie-filter.pipe';
   imports: [     //module
     BrowserModule,
     FormsModule,
-    AppRoutingModule
-    
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],  //services
   bootstrap: [AppComponent]  //starter component
